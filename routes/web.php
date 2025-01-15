@@ -16,3 +16,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function(){
+    return view('home');
+});
+
+Route::get('/profil/{id}', function($id){
+    return "halo ". $id;
+});
+
+Route::get('/dashboard', function(){
+    return view('dashboard');
+});
+
+Route::get('/landing', function(){
+    return view('landing');
+});
+
+Route::get('/project', function(){
+    return view('project');
+});
+
+Route::get('/service', function(){
+    return view('service');
+});
