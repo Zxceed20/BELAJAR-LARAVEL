@@ -40,3 +40,15 @@ Route::get('/project', function(){
 Route::get('/service', function(){
     return view('service');
 });
+
+Route::get('/Mproject', function(){
+    return view('Mproject');
+});
+
+Route::get('/Mdashboard', function(){
+    return view('Mdashboard');
+});
+
+Route::get('/Mservice', function(){
+    return view('Mservice');
+});

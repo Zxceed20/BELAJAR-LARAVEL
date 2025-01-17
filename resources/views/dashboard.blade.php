@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document - @yield('content-title')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap-5.3.3-dist\css\bootstrap.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -17,14 +18,14 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto mt-1">
                 <li>
-                    <a href="/dashboard" class="nav-link active text-white"><i class="bi bi-bank me-2"></i>HOME</a>
+                    <a href="/Mdashboard" class="nav-link active text-white"><i class="bi bi-bank me-2"></i>HOME</a>
                 </li>
                 <li>
-                    <a href="/project" class="nav-link text-white"><i
+                    <a href="/Mproject" class="nav-link text-white"><i
                             class="bi bi-pc-display-horizontal me-2"></i>MASTER PROJECT</a>
                 </li>
                 <li>
-                    <a href="/service" class="nav-link text-white"><i class="bi bi-hammer me-2"></i>MASTER
+                    <a href="/Mservice" class="nav-link text-white"><i class="bi bi-hammer me-2"></i>MASTER
                         SERVICE</a>
                 </li>
             </ul>
@@ -48,40 +49,7 @@
             <div class="content container-fluid">
                 <div class="row">
                     <!-- Kolom Kiri: To-Do List -->
-                    <div class="col-md-6">
-                        <div class="content-section">
-                            <h4>To-Do List</h4>
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="" id="task1">
-                                    <label class="form-check-label" for="task1">Web Toko</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="" id="task2">
-                                    <label class="form-check-label" for="task2">Disain Logo</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="" id="task3">
-                                    <label class="form-check-label" for="task3">Edit Video</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="" id="task3">
-                                    <label class="form-check-label" for="task3">Buat Video Promosi</label>
-                                </li>
-                                <li class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="" id="task3">
-                                    <label class="form-check-label" for="task3">Meeting</label>
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary mt-2">Tambah Tugas</button>
-                        </div>
-                    </div>
-                    <div class="col-md-6 content-section">
-                        <h4>Catatan</h4>
-                        <textarea class="form-control note-area" placeholder="Tulis catatan di sini..."></textarea>
-                        <button class="btn btn-success mt-2">Simpan Catatan</button>
-                    </div>
-                </div>
+                   @yield('dashboard')
             </div>
      
 
