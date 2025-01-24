@@ -17,16 +17,14 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('court_id');
             $table->foreign('court_id')->references('id')->on('courts');
-            $table->string('name');
+            $table->text('name');
             $table->text('address');
             $table->text('phone');
             $table->date('date');
             $table->time('starttime');
             $table->time('endtime');
-            $table->integer('duration');
-            $table->integer('custome');
+            $table->integer('costume');
             $table->integer('shoes');
-            $table->integer('total');
             $table->integer('grandtotal');
             $table->integer('paytotal');
             $table->timestamps();
