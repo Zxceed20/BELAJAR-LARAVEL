@@ -7,15 +7,13 @@
     <table class="table">
         <tr>
             <th>No</th>
-            <th>ID</th>
-            <th>Name</th>
+            <th>Court Type</th>
             <th>Action</th>
         </tr>
         @forelse ($types as $type)
         <tr>
             <td>{{$loop->iteration}}</td>
-            <td>{{$type->id}}</td>
-            <td>{{$type->name}}</td>
+            <td>Type {{$type->id}}</td>
             <td>
                 <a class="btn btn-sm btn-warning" href="">Edit</a>
                 <a class="btn btn-sm btn-danger" href="">Delete</a>
