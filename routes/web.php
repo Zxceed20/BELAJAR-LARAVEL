@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Court_typeController;
 use App\Http\Controllers\courtController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,6 +59,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/court-type', [Court_typeController::class, 'index']);
 Route::post('/court', [courtController::class, 'store']);
+
+Route::get('/user', [UserController::class, 'index']);
+Route::post('/user', [UserController::class, 'store']);
+
+Route::get('/transaction', [TransactionController::class, 'index']);
+Route::post('/transaction', [TransactionController::class, 'store']);
 
 
 Route::resource('court', courtController::class);
